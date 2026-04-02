@@ -6,13 +6,13 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   const box = document.createElement('div');
   const startTop = posTop;
 
-
   titleText.textContent = title;
   descriptionText.textContent = description;
 
   box.appendChild(titleText);
   box.appendChild(descriptionText);
   box.classList.add('notification', type);
+  titleText.classList.add('title');
   document.body.appendChild(box);
 
   box.style.top = `${startTop}px`;
